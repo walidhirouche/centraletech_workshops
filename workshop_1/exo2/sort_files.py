@@ -24,3 +24,9 @@ shutil : permet, avec des methodes, d'effectuer des operations sur des fichiers 
 
 Pour faire l'exercice, l'idée est de lister les fichiers non triés du dossier 'unsorted_files' avec leur extension, puis de passer par chaque fichier, si c'est une nouvelle extension de fichier, on crée un dossier correspondant à l'extension dans le dossier 'sorted_files' et on copie le fichier, sinon on ne fait que copier le fichier dans le dossier approprié
 """
+
+import os, shutil
+
+l = os.listdir(r"C:\Users\rayane.yajjou\OneDrive\centraletech_workshops-main\workshop_1\exo2\unsorted_files")
+
+	

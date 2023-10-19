@@ -10,7 +10,7 @@ Voir le fichier 'monte_carlo_explication.md' pour les étape de l'exercice
 """
 
 import random, math
-
+"""
 nb_pts_interieurs = 0
 nb_iterations = 1000000
 for iteration in #..:
@@ -18,4 +18,4 @@ for iteration in #..:
     if #.. : #..  # condition pour tester si le point généré est à l'intérieur du cercle ou pas 
         #..       # ajout au compteur 
 pi = #..
-print(f'la valeur approximative de pi est : {pi}, le pourcentage d\'écart est de : {}')
+print(f'la valeur approximative de pi est : {pi}, le pourcentage d\'écart est de : {}')"""
