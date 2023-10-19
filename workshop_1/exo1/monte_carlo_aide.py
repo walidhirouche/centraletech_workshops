@@ -9,13 +9,13 @@ math : module qui met à disposition des méthodes liées aux mathématiques
 Voir le fichier 'monte_carlo_explication.md' pour les étape de l'exercice
 """
 
-import random, math
-
+import random,  math
 nb_pts_interieurs = 0
-nb_iterations = 1000000
-for iteration in #..:
-    x, y = #..
-    if #.. : #..  # condition pour tester si le point généré est à l'intérieur du cercle ou pas 
-        #..       # ajout au compteur 
-pi = #..
-print(f'la valeur approximative de pi est : {pi}, le pourcentage d\'écart est de : {}')
+nb_iterations = 1000000 
+for iteration in range(0,nb_iterations):
+    x, y = random.random(), random.random() 
+    if math.sqrt(x**2 + y**2) <= 1 :
+        nb_pts_interieurs += 1
+pi = 4*(nb_pts_interieurs / nb_iterations)
+
+print(f'la valeur approximative de pi est : {pi}, le pourcentage d\'écart est de : {abs((3.14-pi)/3.14)*100}')
