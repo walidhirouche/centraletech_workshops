@@ -13,9 +13,11 @@ import random, math
 
 nb_pts_interieurs = 0
 nb_iterations = 1000000
-for iteration in #..:
-    x, y = #..
-    if #.. : #..  # condition pour tester si le point généré est à l'intérieur du cercle ou pas 
-        #..       # ajout au compteur 
-pi = #..
-print(f'la valeur approximative de pi est : {pi}, le pourcentage d\'écart est de : {}')
+for iteration in range(nb_iterations):
+    x, y = random.random(),random.random()
+    if math.sqrt(x**2+y**2) <=1 : #..  # condition pour tester si le point généré est à l'intérieur du cercle ou pas 
+        nb_pts_interieurs+=1       # ajout au compteur 
+        
+print(nb_iterations, nb_pts_interieurs)
+pi = 4*(nb_pts_interieurs/nb_iterations)
+print(f'la valeur approximative de pi est : {pi}, le pourcentage d\'écart est de : {abs((math.pi-pi)/math.pi)*100}')
