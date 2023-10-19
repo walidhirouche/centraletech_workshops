@@ -27,6 +27,19 @@ Pour faire l'exercice, l'idée est de lister les fichiers non triés du dossier 
 
 import os, shutil
 
-l = os.listdir(r"C:\Users\rayane.yajjou\OneDrive\centraletech_workshops-main\workshop_1\exo2\unsorted_files")
+old = r"C:\Users\rayane.yajjou\OneDrive\centraletech_workshops-main\workshop_1\exo2\unsorted_files"
+new = r"C:\Users\rayane.yajjou\OneDrive\centraletech_workshops-main\workshop_1\exo2\sorted_files"
 
-	
+l = os.listdir(old)
+
+d = []
+
+for f in l:
+	name, ext = f.split(".")
+	d.append([name,ext])
+
+d = list(sorted(d, key=lambda item: item[1]))
+d = ["".join([e[0],".",e[1]]) for e in d]
+
+for f in d:
+	shutil.copy2(old+ r"\\" +f,new)
